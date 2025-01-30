@@ -1,2 +1,3 @@
 # 21
 This is a simple "21" card game program written in Python. In this game, the player can choose whether to draw an additional card or not. The game continues until the player decides to stop or until the total value of their cards exceeds 21, resulting in a loss. The player can keep drawing cards to try and get as close to 21 as possible without going over. The program uses a random card generator and calculates the total value of the player's hand. It's a text-based game with a basic user interface and is a fun way to play the classic card game "21" on your computer.
+▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
