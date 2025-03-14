@@ -1,42 +1,42 @@
 import random
 
-def вибрати_карту():
+def select_card():
     """Функція для отримання випадкової карти."""
-    карти = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-    return random.choice(карти)
+    cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
+    return random.choice(cards)
 
-def розрахувати_значення_руки(рука):
+def calculate_hand_value(hand):
     """Функція для розрахунку значення руки."""
-    значення = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10, 'A': 11}
-    значення_руки = 0
-    кількість_тузів = 0
+    value = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, '10': 10, 'J': 10, 'Q': 10, 'K': 10, 'A': 11}
+    hand_value = 0
+    number_of_aces = 0
 
-    for карта in рука:
-        значення_руки += значення[карта]
-        if карта == 'A':
-            кількість_тузів += 1
+    for card in hand:
+        hand_value += value[card]
+        if card == 'A':
+            number_of_aces += 1
 
-    while кількість_тузів > 0 and значення_руки > 21:
-        значення_руки -= 10
-        кількість_тузів -= 1
+    while number_of_aces > 0 and hand_value > 21:
+        hand_value -= 10
+        number_of_aces -= 1
 
-    return значення_руки
+    return hand_value
 
 def main():
-    рука_гравця = []
+    player_hand = []
     while True:
-        вибір = input("Бажаєте взяти карту? (так/ні): ").lower()
+        choice = input("Бажаєте взяти карту? (так/ні): ").lower()
 
-        if вибір != 'так':
+        if choice != 'так':
             break
 
-        карта = вибрати_карту()
-        рука_гравця.append(карта)
-        print(f"Ваша рука: {', '.join(рука_гравця)}")
-        значення_руки = розрахувати_значення_руки(рука_гравця)
-        print(f" Сума  ваших карт: {значення_руки}")
+        card = select_card()
+        player_hand.append(card)
+        print(f"Ваша рука: {', '.join(player_hand)}")
+        hand_value = calculate_hand_value(player_hand)
+        print(f"Сума ваших карт: {hand_value}")
 
-        if значення_руки > 21:
+        if hand_value > 21:
             print("Перебір! Ви програли.")
             break
 
